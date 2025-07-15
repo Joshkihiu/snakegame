@@ -1,71 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+</head>
+<body>
 
-C Snake Game
-This is a classic Snake game implemented in C, designed to be played in a terminal environment.
+  <h1>🐍 C Snake Game</h1>
+  <p>A classic terminal-based Snake game implemented in <strong>C</strong> using the <code>ncurses</code> library for rendering and input handling.</p>
 
-Prerequisites
-To compile and run this game, you will need:
+  <h2>📋 Prerequisites</h2>
+  <ul>
+    <li>C Compiler (e.g., GCC)</li>
+    <li>ncurses library</li>
+  </ul>
 
-A C Compiler: Most commonly, GCC (GNU Compiler Collection). If you're on Linux or macOS, it's usually pre-installed or easily installable. For Windows, MinGW-w64 is a popular choice.
+  <h2>📦 Installing <code>ncurses</code></h2>
 
-ncurses Library: This library provides the functionality for text-based user interfaces, allowing the game to draw on the terminal and handle input without waiting for Enter after every key press.
+  <div class="os">💻 Debian/Ubuntu (Linux)</div>
+  <pre><code>sudo apt-get update
+sudo apt-get install libncurses5-dev libncursesw5-dev</code></pre>
 
-Installing ncurses
-The installation method for ncurses varies depending on your operating system:
+  <div class="os">🐧 Fedora/RHEL (Linux)</div>
+  <pre><code>sudo dnf install ncurses-devel</code></pre>
 
-On Debian/Ubuntu (Linux):
+  <div class="os">🍏 macOS (Homebrew)</div>
+  <pre><code>brew install ncurses</code></pre>
 
-sudo apt-get update
-sudo apt-get install libncurses5-dev libncursesw5-dev
+  <div class="os">🪟 Windows (MSYS2)</div>
+  <pre><code>pacman -S mingw-w64-x86_64-ncurses
+# or for 32-bit
+pacman -S mingw-w64-i686-ncurses</code></pre>
 
-On Fedora/RHEL (Linux):
+  <div class="note">
+    💡 Make sure your environment variables (e.g., <code>PATH</code>) are correctly set for your compiler.
+  </div>
 
-sudo dnf install ncurses-devel
+  <h2>⚙️ How to Compile and Run</h2>
+  <ol>
+    <li>Save the C code into a file named <code>snake.c</code>.</li>
+    <li>Open your terminal and navigate to the file's directory.</li>
+    <li>Compile the code using:
+      <pre><code>gcc snake.c -o snake -lncurses</code></pre>
+    </li>
+    <li>Run the game:
+      <pre><code>./snake</code></pre>
+    </li>
+  </ol>
 
-On macOS (using Homebrew):
+  <h2>🎮 How to Play</h2>
+  <ul>
+    <li>Use the <strong>Arrow Keys</strong> to move the snake.</li>
+    <li>Eat <code>*</code> (food) to grow longer and earn points.</li>
+    <li>Avoid hitting the <code>#</code> walls or your own <code>o</code> body.</li>
+    <li>When the game ends:
+      <ul>
+        <li>Press <strong>Enter</strong> to restart</li>
+        <li>Press <strong>q</strong> to quit</li>
+      </ul>
+    </li>
+  </ul>
 
-brew install ncurses
+  <h2>✨ Features</h2>
+  <ul>
+    <li>Terminal-based real-time rendering</li>
+    <li>Responsive snake movement</li>
+    <li>Self-collision and border detection</li>
+    <li>Replayability</li>
+  </ul>
 
-On Windows (using MinGW/MSYS2):
-If you're using MinGW or MSYS2, you'll typically install ncurses through their package managers. For MSYS2, you might use:
+  <h2>💡 Tip</h2>
+  <p>You can extend this game by adding levels, color effects, score saving, or even multiplayer mode!</p>
 
-pacman -S mingw-w64-x86_64-ncurses # For 64-bit MinGW
-# or
-pacman -S mingw-w64-i686-ncurses  # For 32-bit MinGW
-
-Ensure your MinGW environment is correctly set up and its bin directory is in your system's PATH.
-
-How to Compile and Run
-Save the Code:
-Save the C code (e.g., from the snake-game-c Canvas) into a file named snake.c.
-
-Open Your Terminal:
-Navigate to the directory where you saved snake.c.
-
-Compile the Game:
-Use your C compiler (GCC is assumed here) and link against the ncurses library:
-
-gcc snake.c -o snake -lncurses
-
-gcc: The C compiler.
-
-snake.c: Your source code file.
-
--o snake: Specifies the output executable file name as snake.
-
--lncurses: Links against the ncurses library.
-
-Run the Game:
-Once compiled successfully, execute the game:
-
-./snake
-
-How to Play
-Use the Arrow Keys (Up, Down, Left, Right) to control the snake's direction.
-
-The snake moves continuously.
-
-Eat the * (food) to grow longer and increase your score.
-
-Avoid hitting the # borders or the snake's own o body.
-
-When the game ends, press Enter to play again, or 'q' to quit.
+</body>
+</html>
