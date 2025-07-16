@@ -71,6 +71,7 @@ pacman -S mingw-w64-i686-ncurses</code></pre>
 
   <h2>💡 Tip</h2>
   <p>You can extend this game by adding levels, color effects, score saving, or even multiplayer mode!</p>
+  <p>fork the project and add more features if you can</p>
 
 </body>
 </html>
